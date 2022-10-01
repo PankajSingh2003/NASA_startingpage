@@ -7,10 +7,10 @@ body{
 .loader-line {
     width: 320px;
     height: 3px;
-    left: 35% !important;
-    top: 69% !important;
+    left: 29% !important;
+    top: 57% !important;
     position: relative;
-    top: 0px;
+    
 
     overflow: hidden;
     background-color: blue;
@@ -193,10 +193,4 @@ body{
        top: 150px;
        border-color: grey;
     }
-
-@media (min-width: 600px) {
-  .column {
-    width: 50%;
-  }
-}
 
