@@ -111,12 +111,12 @@ body{
         align-items: center;
         justify-content: center;
         height: 100vh;
-        margin: 0 30px;
+        margin: 0 30rem;
     }
     
     .profile-card {
         flex: 1 1 30%;
-        max-width: 300px;
+        max-width: 300rem;
         background: #fff;
         padding: 20px 60px;
         display: flex;
