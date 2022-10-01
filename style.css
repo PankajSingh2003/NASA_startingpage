@@ -194,3 +194,9 @@ body{
        border-color: grey;
     }
 
+@media (min-width: 600px) {
+  .column {
+    width: 50%;
+  }
+}
+
