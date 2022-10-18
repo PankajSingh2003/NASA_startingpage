@@ -115,6 +115,8 @@ body{
     }
     
     .profile-card {
+        margin-left: 5px;
+        margin-right: 5px;
         flex: 1 1 30%;
         max-width: 300rem;
         background: #fff;
