@@ -164,7 +164,65 @@ body{
         background: #748dff;
         border: 1px solid #748dff;
     }
-    
+    footer{
+        border-top: 2px solid whitesmoke;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 40rem;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 1000;
+        font-size: 2rem;
+        line-height: 3rem;
+        height: 15rem;
+        width: 90%;
+        margin: 40rem auto 0 auto;
+    }
+    .footerQuote{
+        font-family: 'Courier New', Courier, monospace;
+        color: whitesmoke;
+        margin-bottom: 2rem;
+        margin-left: 7rem;
+    }
+    .footerQuote h3{
+        font-size: 1.9rem;
+
+    }
+    .footerQuote p{
+        font-size: 1.2rem;
+        font-weight: 500;
+        word-spacing: -50%;
+        line-height: 2.2rem;
+    }
+    .firstP{
+        margin-top: 1.5rem;
+    }
+    .socialMedia{
+        
+        margin-bottom: 5rem;
+        margin-right: 7rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .socialMedia > ul{
+        display: flex;
+        justify-content: space-between;
+        width: 20rem;
+    }
+    .socialMedia > ul > li > a{
+        color: white;
+    }
+    .mediaHeader{
+        color: white;
+        width: 100%;
+    }
+    .socialMedia a{
+        transition: 0.5s;
+    }
+    .socialMedia a:hover{
+        font-size: 2.5rem;
+        transition: 0.5s;
+    }
     @media screen and (max-width: 1000px) {
         .profile-name {
             font-size: 18px;
