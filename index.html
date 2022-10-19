@@ -67,8 +67,11 @@
             position: absolute;
             left: 0;
             right: 0;
-            height: 100vh;
-            background: black;
+            background-color: none;
+            z-index: 1;
+          }
+          .mobile-nav.active {
+            background-color: black;
           }
           .nav-links {
             opacity: 0;
@@ -244,6 +247,7 @@
         <script>
           document.getElementById("hamburger-icon").addEventListener('click', () => {
             document.querySelector(".nav-links").classList.toggle('active')
+            document.querySelector(".mobile-nav").classList.toggle('active')
           })
         </script>
 </html>
