@@ -23,6 +23,74 @@
 
           background-color: black;
         }
+        .mobile-nav {
+            display: none;
+        }
+        #hamburger-icon {
+          display: none;
+        }
+        .desktop-nav {
+          padding: 2rem 1.5rem;
+        }
+        .desktop-nav ul {
+          display: flex;
+          justify-content: flex-end;
+          gap: 1rem;
+        }
+        .desktop-nav ul li {
+          list-style-type: none;
+        }
+        .desktop-nav ul li a {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          color: #fff;
+          font-weight: 900;
+          transition: all 0.25s ease;
+        }
+        .desktop-nav ul li a:hover {
+          font-size: 1.6rem;
+          border-bottom: 2px solid #fff;
+        }
+        @media(max-width: 815px) {
+          .desktop-nav {
+            display: none;
+          }
+          #hamburger-icon {
+            display: block;
+            text-align: right;
+            padding: 1rem 1rem 0 0;
+          }
+          .mobile-nav {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            background: black;
+          }
+          .nav-links {
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.5s ease;
+          }
+          .nav-links.active {
+            opacity: 1;
+            pointer-events: auto;
+          }
+          .mobile-nav ul li {
+            text-decoration: none;
+            margin-top: 1rem;
+          }
+          .mobile-nav ul li a {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+        }
         
         .bg {
           background-image: url("/wp2069024-the-earth-wallpapers.jpg");
@@ -72,6 +140,29 @@
         }
         </style>
         <body>
+            <nav class="desktop-nav">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Technology</a></li>
+              </ul>
+            </nav>
+            <nav class="mobile-nav">
+              <div id="hamburger-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="11">
+                  <g fill="#fff" fill-rule="evenodd">
+                    <path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z"/>
+                  </g>
+                </svg>
+              </div>
+              <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Technology</a></li>
+              </ul>
+            </nav>
             <div class="bg">
             
                 <p style="color: rgb(252, 249, 249); font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:  xxx-large; font-weight: 1000; position: relative; left: 65rem; top: 31rem">Parker</p>
@@ -149,4 +240,10 @@
             </div>
             <div>
         </body>
+
+        <script>
+          document.getElementById("hamburger-icon").addEventListener('click', () => {
+            document.querySelector(".nav-links").classList.toggle('active')
+          })
+        </script>
 </html>
