@@ -38,15 +38,18 @@
           display: none;
         }
         .desktop-nav {
-          padding: 2rem 1.5rem;
+          display: flex;
+          width: 100%;
+          justify-content: flex-end;
+          align-items: center;
         }
         .desktop-nav ul {
           display: flex;
           justify-content: flex-end;
-          gap: 1rem;
         }
         .desktop-nav ul li {
           list-style-type: none;
+          padding: 2rem;
         }
         .desktop-nav ul li a {
           font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -57,9 +60,9 @@
           font-weight: 900;
           transition: all 0.25s ease;
         }
-        .desktop-nav ul li a:hover {
-          font-size: 1.6rem;
-          border-bottom: 2px solid #fff;
+        .desktop-nav ul > li:hover {
+          filter: invert();
+          background-color: black;
         }
         @media(max-width: 815px) {
           .desktop-nav {
@@ -103,62 +106,61 @@
           }
         }
 
-        .bg {
-          background-image: url("/wp2069024-the-earth-wallpapers.jpg");
-          height: 50rem;
-
-
+        .wide-bg {
+          height: 100vh;
+          width: 100vw;
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
           overflow-x: hidden;
           overflow-y: hidden;
         }
+
+        .text-container {
+          color: white;
+          width: 40%;
+          max-width: 50vw;
+          float: right;
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 23px;
+          font-weight: 1000;
+          margin: 2%;
+        }
+
+        .p-citation {
+          color: rgb(129, 126, 126);
+          margin-top: 36px;
+        }
+
+        .bg {
+          background-image: url("/wp2069024-the-earth-wallpapers.jpg");
+        }
         .bg1{
           background-image: url("/1_sun.jpg");
-          height: 50rem;
-
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
         }
 
         .bg2{
           background-image: url("/116939.jpg");
-          height: 50rem;
-
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
         }
 
         .bg3{
           background-image: url("51726-moon-stars-planets-4k-5k-hd.jpg");
-          height: 50rem;
-
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
         }
 
         .bg4{
-
-          background-image: url("/wp4862608-full-black-desktop-wallpapers.jpg"); 
-          height: 20rem; 
-
           background-image: url("/wp4862608-full-black-desktop-wallpapers.jpg");
-          height: 50rem;
-
-
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
         }
 
   .social-icon{
-  margin: 10px 20px;
-  font-size: 50px;
-  color: white;
+    margin: 10px 20px;
+    font-size: 50px;
+    color: white;
 }
 
 .social-icon:hover{
@@ -180,140 +182,137 @@
 }
 
         </style>
-        <body>
-            <nav class="desktop-nav">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Launch</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Technology</a></li>
-              </ul>
-            </nav>
-            <nav class="mobile-nav">
-              <div id="hamburger-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="11">
-                  <g fill="#fff" fill-rule="evenodd">
-                    <path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z"/>
-                  </g>
-                </svg>
-              </div>
-              <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Launch</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Technology</a></li>
-              </ul>
-            </nav>
-            <div class="bg">
+      <body>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Launch</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Technology</a></li>
+          </ul>
+        </nav>
+        <nav class="mobile-nav">
+          <div id="hamburger-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="11">
+              <g fill="#fff" fill-rule="evenodd">
+                <path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z"/>
+              </g>
+            </svg>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Launch</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Technology</a></li>
+          </ul>
+        </nav>
+        <div class="bg wide-bg">
 
-                <p style="color: rgb(252, 249, 249); font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:  xxx-large; font-weight: 1000; position: relative; left: 65rem; top: 31rem">Parker</p>
-                <p style="color: rgb(245, 244, 244); font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:  xxx-large; font-weight: 1000; position: relative; left: 65rem; top: 32rem"> Solar Probe</p>
-                <div class="loader-line"></div>
-            </div>
-            <div class="bg2">
-                <p style="color: #03A062; font-family: 'Courier New', Courier, monospace; font-size:  xx-large; font-weight: 1000; position: relative; left: 65rem; top: 10rem;">Let's get Started !!</p>
-                <p style="color: #03A062; font-family: 'Courier New', Courier, monospace; font-size:  xx-large; font-weight: 1000; position: relative; left: 50rem; top: 10.5rem;">(Best wishes on your new adventure)</p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size:  23px; font-weight: 1000; position: relative; left: 48rem; top: 13rem;">The Parker Solar Probe is a NASA space probe launched</p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 48rem; top: 13.5rem;"> in 2018 with the mission of making observations of the</p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 48rem; top: 14rem;">outer corona of the Sun. It will approach to within </p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 48rem; top: 14.5rem;">9.86 radii(6.9 million km or 4.3 million miles) from </p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 48rem; top: 15rem;">the center of the Sun , and by 2025 will travel, at </p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 48rem; top: 15.5rem;">closest approach , as fast as 690,000 km/h  or 0.064%</p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 48rem; top: 16rem;"> the speed of light. It is the fastest object ever </p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 48rem; top: 16.5rem;">built.</p>
-                <p style="color: grey; font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 48rem; top: 20.5rem;">“Somewhere, something incredible is waiting to </p>
-                <p style="color: grey; font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 48rem; top: 20.5rem;">be known.”</p>
-                <p style="color: grey; font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 58rem; top: 20.5rem;">- Carl Sagan</p>
-                </p>
-            </div>
-            <div class="bg3">
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 14rem;">The Parker Solar Probe is the first spacecraft to </p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 14.5rem;">fly into the low solar corona. It will assess  </p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 15rem;">the structureand dynamics of the Sun's coronal </p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 15.5rem;">plasma and magnetic field, the energy flow that </p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 16rem;">heats the solar corona and impels the solar wind, </p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 16.5rem;">and the mechanisms that accelerate energetic</p>
-                <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 17rem;"> particles. </p>
-                <p style="color: rgb(129, 126, 126); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 23.5rem;">"That's one small step for man, one giant leap for mankind."</p>
-                <p style="color: rgb(129, 126, 126); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 33rem; top: 24rem;">- Neil Armstrong</p>
-
-            </div>
-            <div class="bg1">
-              <a href="https://thriving-eclair-cb7264.netlify.app/"><button class="btn">Let's start</button></a>
-            </div>
-            <div class="bg4">
-              <body>
-                <!-- <a href="#" style="position: relative; left: -34rem;"><button class="btn1">Our Team</button></a> -->
-                <div class="our-team"><a href="#">Our Team</a></div>
-                <div class="profile-container">
-                  <div class="profile-card">
-                    <img src="/pankajphoto.jpg" alt="image1" class="profile-icon" />
-                    <div class="profile-name">Pankaj</div>
-                    <div class="profile-position">Web Developer</div>
-                    <a href="https://www.instagram.com/pankaj_singh_____/" class="button">Connect</a>
-                  </div>
-                  <div class="profile-card">
-                    <img src="/vishwajeetphoto.jpg" alt="image2" class="profile-icon" />
-                    <div class="profile-name">Vishwajeet</div>
-                    <div class="profile-position">Graphics Designer</div>
-                    <a href="https://www.instagram.com/__vishwajeet_/" class="button">Connect</a>
-                  </div>
-                  <div class="profile-card">
-                    <img src="/Aryan Photo.jpg" alt="image3" class="profile-icon" />
-                    <div class="profile-name">Aryan</div>
-                    <div class="profile-position">Android Developer</div>
-                    <a href="https://www.instagram.com/aryanxsri/" class="button">Connect</a>
-                  </div>
-                  <div class="profile-card">
-                    <img src="/Aditya Photo.jpg" alt="image3" class="profile-icon" />
-                    <div class="profile-name">Aditya</div>
-                    <div class="profile-position">Content Writer</div>
-                    <a href="https://www.instagram.com/bluetick031/" class="button">Connect</a>
-                  </div>
-                  <div class="profile-card">
-                    <img src="/Utkarsh Photo.jpg" alt="image3" class="profile-icon" />
-                    <div class="profile-name">Utkarsh</div>
-                    <div class="profile-position">video editor</div>
-                    <a href="https://www.instagram.com/utkarssssshh/" class="button">Connect</a>
-                  </div>
+            <p style="color: rgb(252, 249, 249); font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:  xxx-large; font-weight: 1000; position: relative; left: 65rem; top: 31rem">Parker</p>
+            <p style="color: rgb(245, 244, 244); font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:  xxx-large; font-weight: 1000; position: relative; left: 65rem; top: 32rem"> Solar Probe</p>
+            <div class="loader-line"></div>
+        </div>
+        <div class="bg2 wide-bg">
+          <div class="text-container">
+            <h2 style="color: green;">
+              Let's get Started !!
+              <br>
+              (Best wishes on your new adventure)
+            </h2>
+            <br>
+            <p>
+              The Parker Solar Probe is a NASA space probe launched in 2018 with the mission of making observations of the outer corona of the Sun. It will approach to within 9.86 radii(6.9 million km or 4.3 million miles) from the center of the Sun , and by 2025 will travel, at closest approach , as fast as 690,000 km/h or 0.064% the speed of light. It is the fastest object ever built.
+            </p>
+            <p class="p-citation">
+              “Somewhere, something incredible is waiting to be known.” - Carl Sagan
+            </p>
+          </div>
+        </div>
+        <div class="bg3 wide-bg">
+            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 14rem;">The Parker Solar Probe is the first spacecraft to </p>
+            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 14.5rem;">fly into the low solar corona. It will assess  </p>
+            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 15rem;">the structureand dynamics of the Sun's coronal </p>
+            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 15.5rem;">plasma and magnetic field, the energy flow that </p>
+            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 16rem;">heats the solar corona and impels the solar wind, </p>
+            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 16.5rem;">and the mechanisms that accelerate energetic</p>
+            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 17rem;"> particles. </p>
+            <p style="color: rgb(129, 126, 126); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 23.5rem;">"That's one small step for man, one giant leap for mankind."</p>
+            <p style="color: rgb(129, 126, 126); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 33rem; top: 24rem;">- Neil Armstrong</p>
+        </div>
+        <div class="bg1 wide-bg">
+          <a href="https://thriving-eclair-cb7264.netlify.app/">
+            <button class="btn">Let's start</button></a>
+        </div>
+          <div class="bg4">
+              <!-- <a href="#" style="position: relative; left: -34rem;"><button class="btn1">Our Team</button></a> -->
+              <div class="our-team"><a href="#">Our Team</a></div>
+              <div class="profile-container">
+                <div class="profile-card">
+                  <img src="/pankajphoto.jpg" alt="image1" class="profile-icon" />
+                  <div class="profile-name">Pankaj</div>
+                  <div class="profile-position">Web Developer</div>
+                  <a href="https://www.instagram.com/pankaj_singh_____/" class="button">Connect</a>
                 </div>
-                <p style="color: whitesmoke; font-family: 'Courier New', Courier, monospace; font-size: 20px;  font-weight: 1000; text-align: right; position: relative; bottom: 20rem !important;justify-content: right;"> - ( Switch to a pc for better experience )⠀⠀</p>
-              </body>
+                <div class="profile-card">
+                  <img src="/vishwajeetphoto.jpg" alt="image2" class="profile-icon" />
+                  <div class="profile-name">Vishwajeet</div>
+                  <div class="profile-position">Graphics Designer</div>
+                  <a href="https://www.instagram.com/__vishwajeet_/" class="button">Connect</a>
+                </div>
+                <div class="profile-card">
+                  <img src="/Aryan Photo.jpg" alt="image3" class="profile-icon" />
+                  <div class="profile-name">Aryan</div>
+                  <div class="profile-position">Android Developer</div>
+                  <a href="https://www.instagram.com/aryanxsri/" class="button">Connect</a>
+                </div>
+                <div class="profile-card">
+                  <img src="/Aditya Photo.jpg" alt="image3" class="profile-icon" />
+                  <div class="profile-name">Aditya</div>
+                  <div class="profile-position">Content Writer</div>
+                  <a href="https://www.instagram.com/bluetick031/" class="button">Connect</a>
+                </div>
+                <div class="profile-card">
+                  <img src="/Utkarsh Photo.jpg" alt="image3" class="profile-icon" />
+                  <div class="profile-name">Utkarsh</div>
+                  <div class="profile-position">video editor</div>
+                  <a href="https://www.instagram.com/utkarssssshh/" class="button">Connect</a>
+                </div>
+              </div>
+              <div  class="disclaimer" style="color: whitesmoke; font-family: 'Courier New', Courier, monospace; font-size: 20px;  font-weight: 1000; text-align: right; justify-content: right;"> - ( Switch to a pc for better experience )⠀⠀</div>
+          </div>
+          <footer>
+            <div class="footerQuote">
+              <h3>PANKAJ SINGH</h3>
+              <p class="firstP">If it takes less than 2 minutes, then do it now.</p>
+              <p>-David Allen</p>
             </div>
+            <div class="socialMedia">
+              <span class="mediaHeader">SOCIAL</span>
+              <ul>
+                <li>
+                  <a href="https://github.com" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
 
+                <li>
+                  <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </li>
 
-        </body>
-        <footer style= "position: relative; ">
-          <div class="footerQuote">
-            <h3>PANKAJ SINGH</h3>
-            <p class="firstP">If it takes less than 2 minutes, then do it now.</p>
-            <p>-David Allen</p>
+                <li>
+                  <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                </li>
+
+                <li>
+                  <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </li>
+
+                <li>
+                  <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="socialMedia">
-            <span class="mediaHeader">SOCIAL</span>
-            <ul>
-              <li>
-                <a href="https://github.com" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-              </li>
-
-              <li>
-                <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-              </li>
-
-              <li>
-                <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-              </li>
-
-              <li> 
-                <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-              </li>
-
-              <li> 
-                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-              </li>
-            </ul>
-          </div>
-        </footer>
+          </footer>
+      </body>
         <script>
           document.getElementById("hamburger-icon").addEventListener('click', () => {
             document.querySelector(".nav-links").classList.toggle('active')
