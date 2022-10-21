@@ -91,6 +91,14 @@ body{
        left: 39rem;
        top: 45rem;
        border-color: grey;
+       transition: 500ms ease-in-out;
+    }
+    .btn:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        box-shadow: 0 0 5px #42fbf2,
+        0 0 10px #42fbf2,
+        0 0 50px #42fbf2; 
     }
 
 
@@ -125,11 +133,16 @@ body{
         border-radius: 4px;
         box-shadow: 0 0 2px 0 #ccc;
         transition: .3s;
+        margin: 0px 15px;
     }
     
     .profile-card:hover {
         transform: scale(1.1);
-        box-shadow: 0 0 25px -5px #ccc;
+        /* box-shadow: 0 0 25px -5px #ccc; */
+        box-shadow: 0 0 5px #42fbf2,
+        0 0 10px #42fbf2,
+        0 0 50px #42fbf2; 
+
     }
     
     .profile-icon {
@@ -239,7 +252,7 @@ body{
         }
     }
 
-    .btn1{
+    /* .btn1{
         padding: 27px;
         font-size: 1.5rem;
         border-radius: 130px;
@@ -250,5 +263,31 @@ body{
        right: -680px;
        top: 150px;
        border-color: grey;
+       transition: 500ms ease-in-out;
     }
+    .btn1:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        box-shadow: 0 0 5px #DC143C,
+        0 0 10px #DC143C,
+        0 0 50px #DC143C; 
+      
+    } */
+   .our-team{
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    margin-bottom: -150px;
+   }
+   .our-team > a{
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+    letter-spacing: 0.2rem;
+    font-size: 1.75rem;
+    font-weight: 500;
+    border-bottom: 2px solid #DC143C;
+    transition: 400ms ease-in-out;
 
+   }
+  
