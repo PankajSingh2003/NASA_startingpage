@@ -10,7 +10,7 @@ body{
     left: 29% !important;
     top: 57% !important;
     position: relative;
-    
+
 
     overflow: hidden;
     background-color: blue;
@@ -86,19 +86,17 @@ body{
         border-radius: 30px;
         color: #03A062;
         background-color: black;
-       width: 300px;
-       position: relative;
-       left: 39rem;
-       top: 45rem;
-       border-color: grey;
-       transition: 500ms ease-in-out;
+        width: 300px;
+        border-color: grey;
+        transition: 500ms ease-in-out;
+        margin-bottom: 24vh;
     }
     .btn:hover{
         cursor: pointer;
         transform: scale(1.1);
         box-shadow: 0 0 5px #42fbf2,
         0 0 10px #42fbf2,
-        0 0 50px #42fbf2; 
+        0 0 50px #42fbf2;
     }
 
 
@@ -108,12 +106,12 @@ body{
         margin: 0;
         box-sizing: border-box;
     }
-    
+
     body {
         background: rgb(223,223,223);
         font-family: 'PT Sans', sans-serif;
     }
-    
+
     .profile-container {
         display: flex;
         align-items: center;
@@ -121,7 +119,7 @@ body{
         height: 100vh;
         margin: 0 30rem;
     }
-    
+
     .profile-card {
         flex: 1 1 30%;
         max-width: 300rem;
@@ -135,34 +133,34 @@ body{
         transition: .3s;
         margin: 0px 15px;
     }
-    
+
     .profile-card:hover {
         transform: scale(1.1);
         /* box-shadow: 0 0 25px -5px #ccc; */
         box-shadow: 0 0 5px #42fbf2,
         0 0 10px #42fbf2,
-        0 0 50px #42fbf2; 
+        0 0 50px #42fbf2;
 
     }
-    
+
     .profile-icon {
         height: 100px;
         width: 100px;
         object-fit: cover;
         border-radius: 50%;
     }
-    
+
     .profile-name {
         font-size: 24px;
         font-weight: bold;
         margin: 25px 0 10px 0;
     }
-    
+
     .profile-position {
         font-size: 14px;
         color: #777;
     }
-    
+
     .button {
         margin: 40px 0 0 0;
         padding: 10px 30px;
@@ -171,7 +169,7 @@ body{
         border: 1px solid #999;
         border-radius: 4px;
     }
-    
+
     .button:hover {
         color: #fff;
         background: #748dff;
@@ -211,7 +209,7 @@ body{
         margin-top: 1.5rem;
     }
     .socialMedia{
-        
+
         margin-bottom: 5rem;
         margin-right: 7rem;
         display: flex;
@@ -241,12 +239,12 @@ body{
             font-size: 18px;
         }
     }
-    
+
     @media screen and (max-width: 800px) {
         .profile-card {
             padding: 20px 15px;
         }
-    
+
         .profile-name {
             font-size: 16px;
         }
@@ -270,8 +268,8 @@ body{
         transform: scale(1.1);
         box-shadow: 0 0 5px #DC143C,
         0 0 10px #DC143C,
-        0 0 50px #DC143C; 
-      
+        0 0 50px #DC143C;
+
     } */
    .our-team{
     display: flex;
@@ -290,4 +288,4 @@ body{
     transition: 400ms ease-in-out;
 
    }
-  
+
