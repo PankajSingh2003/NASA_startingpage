@@ -25,3 +25,10 @@ stars = {
 };
 
 stars.create();
+
+function light_dark_mode() {
+  const body = document.body;
+  body.classList.toggle("light-mode");
+  const moon =document.querySelector('.bg3')  
+  moon.classList.toggle("moon_invert");  
+}
