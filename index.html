@@ -60,7 +60,7 @@
           font-weight: 900;
           transition: all 0.25s ease;
         }
-        .desktop-nav ul > li:hover {
+        .desktop-nav ul > li:not(:first-child):hover {
           filter: invert();
           background-color: black;
         }
@@ -157,34 +157,54 @@
           background-image: url("/wp4862608-full-black-desktop-wallpapers.jpg");
         }
 
-  .social-icon{
-    margin: 10px 20px;
-    font-size: 50px;
-    color: white;
-}
+        .social-icon{
+          margin: 10px 20px;
+          font-size: 50px;
+          color: white;
+        }
 
-.social-icon:hover{
-  color:blue;
-}
+        .social-icon:hover{
+          color:blue;
+        }
 
-.copyright{
-  font-size: 30px;
-}
+        .copyright{
+          font-size: 30px;
+        }
 
-.copyright:hover{
-  color: white;
-}
+        .copyright:hover{
+          color: white;
+        }
 
-.footer{
-  text-align: center;
-  padding: 7% 15%;
-  background-color: #5c5c5c;
-}
+        .footer{
+          text-align: center;
+          padding: 7% 15%;
+          background-color: #5c5c5c;
+        }
+        #mode_button{         
+          width: 80px;
+          height: 40px;          
+          background-color: #ddd;
+          border-radius: 10px;
+        }
+        .light-mode {
+          background-color: rgb(48,125,197);          
+        }
+        #mode_button:hover{
+          background-color: #ccc;
+        }
+        .moon_invert{
+          background-image: url("moon_light.jpg");
+        }
 
         </style>
       <body>
         <nav class="desktop-nav">
-          <ul>
+          <ul> 
+            <li>             
+              <button id="mode_button" class="mode_button" onclick=light_dark_mode()>  
+                Light  Mode           
+              </button>             
+            </li>       
             <li><a href="#">Home</a></li>
             <li><a href="#">Launch</a></li>
             <li><a href="#">Our Team</a></li>
