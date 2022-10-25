@@ -1,345 +1,551 @@
-<!Doctype HTML>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-          <meta name="description" content="Starting webpage for nasa space apps">
-          <meta name="keywords" content="HTML, CSS, JavaScript">
-          <meta name="author" content="Pankaj Singh">
-          <meta name="description" content="Starting webpage">
-          <meta name="keywords" content="HTML, CSS, JavaScript,SASS">
-          <meta name="author" content="Pankaj">
+    <meta name="description" content="Starting webpage for nasa space apps" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Pankaj Singh" />
+    <meta name="description" content="Starting webpage" />
+    <meta name="keywords" content="HTML, CSS, JavaScript,SASS" />
+    <meta name="author" content="Pankaj" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://kit.fontawesome.com/38705f3c43.js" crossorigin="anonymous"></script>
-        <title>Parker Solar Probe</title>
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/855e3f5928.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/38705f3c43.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Parker Solar Probe</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/855e3f5928.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js"></script>
-    </head>
-    <style>
-        body, html {
-          height: 100%;
-          margin: 0;
-          overflow-x: hidden;
+  </head>
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      overflow-x: hidden;
 
-          background-color: black;
-        }
-        .mobile-nav {
-            display: none;
-        }
-        #hamburger-icon {
-          display: none;
-        }
-        .desktop-nav {
-          display: flex;
-          width: 100%;
-          justify-content: flex-end;
-          align-items: center;
-        }
-        .desktop-nav ul {
-          display: flex;
-          justify-content: flex-end;
-        }
-        .desktop-nav ul li {
-          list-style-type: none;
-          padding: 2rem;
-        }
-        .desktop-nav ul li a {
+      background-color: black;
+    }
+    .mobile-nav {
+      display: none;
+    }
+    #hamburger-icon {
+      display: none;
+    }
+    .desktop-nav {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .desktop-nav ul {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .desktop-nav ul li {
+      list-style-type: none;
+      padding: 2rem;
+    }
+    .desktop-nav ul li a {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 900;
+      transition: all 0.25s ease;
+    }
+    .desktop-nav ul > li:not(:first-child):hover {
+      filter: invert();
+      background-color: black;
+    }
+    @media (max-width: 815px) {
+      .desktop-nav {
+        display: none;
+      }
+      #hamburger-icon {
+        display: block;
+        text-align: right;
+        padding: 1rem 1rem 0 0;
+      }
+      .mobile-nav {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: none;
+        z-index: 1;
+      }
+      .mobile-nav.active {
+        background-color: black;
+      }
+      .nav-links {
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s ease;
+      }
+      .nav-links.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .mobile-nav ul li {
+        text-decoration: none;
+        margin-top: 1rem;
+      }
+      .mobile-nav ul li a {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #fff;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+
+    .wide-bg {
+      height: 100vh;
+      width: 100vw;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+    .text-container {
+      color: white;
+      width: 40%;
+      max-width: 50vw;
+      float: right;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 23px;
+      font-weight: 1000;
+      margin: 2%;
+    }
+
+    .p-citation {
+      color: rgb(129, 126, 126);
+      margin-top: 36px;
+    }
+
+    .bg {
+      background-image: url("images/space/wp2069024-the-earth-wallpapers.jpg");
+    }
+    .bg1 {
+      background-image: url("images/space/1_sun.jpg");
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .bg2 {
+      background-image: url("images/space/116939.jpg");
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .bg3 {
+      background-image: url("images/space/51726-moon-stars-planets-4k-5k-hd.jpg");
+    }
+
+    .bg4 {
+      background-image: url("images/space/wp4862608-full-black-desktop-wallpapers.jpg");
+    }
+
+    .social-icon {
+      margin: 10px 20px;
+      font-size: 50px;
+      color: white;
+    }
+
+    .social-icon:hover {
+      color: blue;
+    }
+
+    .copyright {
+      font-size: 30px;
+    }
+
+    .copyright:hover {
+      color: white;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 7% 15%;
+      background-color: #5c5c5c;
+    }
+    #mode_button {
+      padding: 5px 10px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+    .light-mode {
+      background-color: rgb(48, 125, 197);
+    }
+    #mode_button:hover {
+      background-color: #ccc;
+    }
+    .moon_invert {
+      background-image: url("images/space/moon_light.jpg");
+    }
+  </style>
+  <body>
+    <nav class="desktop-nav">
+      <ul>
+        <li>
+          <a
+            id="mode_button"
+            class="mode_button"
+            onclick="light_dark_mode()"
+          >
+            Light Mode
+        </a>
+        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#launch">Launch</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#technology">Technology</a></li>
+      </ul>
+    </nav>
+    <nav class="mobile-nav">
+      <div id="hamburger-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="11">
+          <g fill="#fff" fill-rule="evenodd">
+            <path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z" />
+          </g>
+        </svg>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#launch">Launch</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#technology">Technology</a></li>
+      </ul>
+    </nav>
+    <div class="bg wide-bg" id="home">
+      <p
+        style="
+          color: rgb(252, 249, 249);
           font-family: Verdana, Geneva, Tahoma, sans-serif;
-          text-decoration: none;
-          text-transform: uppercase;
-          font-size: 1.5rem;
-          color: #fff;
-          font-weight: 900;
-          transition: all 0.25s ease;
-        }
-        .desktop-nav ul > li:not(:first-child):hover {
-          filter: invert();
-          background-color: black;
-        }
-        @media(max-width: 815px) {
-          .desktop-nav {
-            display: none;
-          }
-          #hamburger-icon {
-            display: block;
-            text-align: right;
-            padding: 1rem 1rem 0 0;
-          }
-          .mobile-nav {
-            display: block;
-            position: absolute;
-            left: 0;
-            right: 0;
-            background-color: none;
-            z-index: 1;
-          }
-          .mobile-nav.active {
-            background-color: black;
-          }
-          .nav-links {
-            opacity: 0;
-            pointer-events: none;
-            transition: 0.5s ease;
-          }
-          .nav-links.active {
-            opacity: 1;
-            pointer-events: auto;
-          }
-          .mobile-nav ul li {
-            text-decoration: none;
-            margin-top: 1rem;
-          }
-          .mobile-nav ul li a {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: #fff;
-            font-size: 1.5rem;
-            text-decoration: none;
-            text-transform: uppercase;
-          }
-        }
-
-        .wide-bg {
-          height: 100vh;
-          width: 100vw;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          overflow-x: hidden;
-          overflow-y: hidden;
-        }
-
-        .text-container {
-          color: white;
-          width: 40%;
-          max-width: 50vw;
-          float: right;
+          font-size: xxx-large;
+          font-weight: 1000;
+          position: relative;
+          left: 65rem;
+          top: 31rem;
+        "
+      >
+        Parker
+      </p>
+      <p
+        style="
+          color: rgb(245, 244, 244);
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: xxx-large;
+          font-weight: 1000;
+          position: relative;
+          left: 65rem;
+          top: 32rem;
+        "
+      >
+        Solar Probe
+      </p>
+      <div class="loader-line"></div>
+    </div>
+    <div class="bg2 wide-bg">
+      <div class="text-container">
+        <h2 style="color: green">
+          Let's get Started !!
+          <br />
+          (Best wishes on your new adventure)
+        </h2>
+        <br />
+        <p>
+          The Parker Solar Probe is a NASA space probe launched in 2018 with the
+          mission of making observations of the outer corona of the Sun. It will
+          approach to within 9.86 radii(6.9 million km or 4.3 million miles)
+          from the center of the Sun , and by 2025 will travel, at closest
+          approach , as fast as 690,000 km/h or 0.064% the speed of light. It is
+          the fastest object ever built.
+        </p>
+        <p class="p-citation">
+          “Somewhere, something incredible is waiting to be known.” - Carl Sagan
+        </p>
+      </div>
+    </div>
+    <div class="bg3 wide-bg">
+      <p
+        style="
+          color: rgb(252, 249, 249);
           font-family: 'Courier New', Courier, monospace;
           font-size: 23px;
           font-weight: 1000;
-          margin: 2%;
-        }
-
-        .p-citation {
+          position: relative;
+          left: 1rem;
+          top: 14rem;
+        "
+      >
+        The Parker Solar Probe is the first spacecraft to
+      </p>
+      <p
+        style="
+          color: rgb(252, 249, 249);
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 23px;
+          font-weight: 1000;
+          position: relative;
+          left: 1rem;
+          top: 14.5rem;
+        "
+      >
+        fly into the low solar corona. It will assess
+      </p>
+      <p
+        style="
+          color: rgb(252, 249, 249);
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 23px;
+          font-weight: 1000;
+          position: relative;
+          left: 1rem;
+          top: 15rem;
+        "
+      >
+        the structureand dynamics of the Sun's coronal
+      </p>
+      <p
+        style="
+          color: rgb(252, 249, 249);
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 23px;
+          font-weight: 1000;
+          position: relative;
+          left: 1rem;
+          top: 15.5rem;
+        "
+      >
+        plasma and magnetic field, the energy flow that
+      </p>
+      <p
+        style="
+          color: rgb(252, 249, 249);
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 23px;
+          font-weight: 1000;
+          position: relative;
+          left: 1rem;
+          top: 16rem;
+        "
+      >
+        heats the solar corona and impels the solar wind,
+      </p>
+      <p
+        style="
+          color: rgb(252, 249, 249);
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 23px;
+          font-weight: 1000;
+          position: relative;
+          left: 1rem;
+          top: 16.5rem;
+        "
+      >
+        and the mechanisms that accelerate energetic
+      </p>
+      <p
+        style="
+          color: rgb(252, 249, 249);
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 23px;
+          font-weight: 1000;
+          position: relative;
+          left: 1rem;
+          top: 17rem;
+        "
+      >
+        particles.
+      </p>
+      <p
+        style="
           color: rgb(129, 126, 126);
-          margin-top: 36px;
-        }
-
-        .bg {
-          background-image: url("images/space/wp2069024-the-earth-wallpapers.jpg");
-        }
-        .bg1{
-          background-image: url("images/space/1_sun.jpg");
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
-        }
-
-        .bg2{
-          background-image: url("images/space/116939.jpg");
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-        }
-
-        .bg3{
-          background-image: url("images/space/51726-moon-stars-planets-4k-5k-hd.jpg");
-        }
-
-        .bg4{
-          background-image: url("images/space/wp4862608-full-black-desktop-wallpapers.jpg");
-        }
-
-        .social-icon{
-          margin: 10px 20px;
-          font-size: 50px;
-          color: white;
-        }
-
-        .social-icon:hover{
-          color:blue;
-        }
-
-        .copyright{
-          font-size: 30px;
-        }
-
-        .copyright:hover{
-          color: white;
-        }
-
-        .footer{
-          text-align: center;
-          padding: 7% 15%;
-          background-color: #5c5c5c;
-        }
-        #mode_button{         
-          width: 80px;
-          height: 40px;          
-          background-color: #ddd;
-          border-radius: 10px;
-        }
-        .light-mode {
-          background-color: rgb(48,125,197);          
-        }
-        #mode_button:hover{
-          background-color: #ccc;
-        }
-        .moon_invert{
-          background-image: url("images/space/moon_light.jpg");
-        }
-
-        </style>
-      <body>
-        <nav class="desktop-nav">
-          <ul> 
-            <li>             
-              <button id="mode_button" class="mode_button" onclick=light_dark_mode()>  
-                Light  Mode           
-              </button>             
-            </li>       
-            <li><a href="#home">Home</a></li>
-            <li><a href="#launch">Launch</a></li>
-            <li><a href="#team">Our Team</a></li>
-            <li><a href="#technology">Technology</a></li>
-          </ul>
-        </nav>
-        <nav class="mobile-nav">
-          <div id="hamburger-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="11">
-              <g fill="#fff" fill-rule="evenodd">
-                <path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z"/>
-              </g>
-            </svg>
-          </div>
-          <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#launch">Launch</a></li>
-            <li><a href="#team">Our Team</a></li>
-            <li><a href="#technology">Technology</a></li>
-          </ul>
-        </nav>
-        <div class="bg wide-bg" id="home">
-
-            <p style="color: rgb(252, 249, 249); font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:  xxx-large; font-weight: 1000; position: relative; left: 65rem; top: 31rem">Parker</p>
-            <p style="color: rgb(245, 244, 244); font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:  xxx-large; font-weight: 1000; position: relative; left: 65rem; top: 32rem"> Solar Probe</p>
-            <div class="loader-line"></div>
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 23px;
+          font-weight: 1000;
+          position: relative;
+          left: 1rem;
+          top: 23.5rem;
+        "
+      >
+        "That's one small step for man, one giant leap for mankind."
+      </p>
+      <p
+        style="
+          color: rgb(129, 126, 126);
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 23px;
+          font-weight: 1000;
+          position: relative;
+          left: 33rem;
+          top: 24rem;
+        "
+      >
+        - Neil Armstrong
+      </p>
+    </div>
+    <div class="bg1 wide-bg">
+      <br />
+      <br />
+      <br />
+      <a href="https://thriving-eclair-cb7264.netlify.app/">
+        <button
+          class="btn"
+          style="top: 11rem !important; position: relative"
+          id="launch"
+        >
+          Let's start
+        </button></a
+      >
+    </div>
+    <div class="bg4">
+      <!-- <a href="#" style="position: relative; left: -34rem;"><button class="btn1">Our Team</button></a> -->
+      <div class="our-team" id="team"><a href="#">Our Team</a></div>
+      <div class="profile-container">
+        <div class="profile-card">
+          <img
+            src="images/team/pankajphoto.jpg"
+            alt="image1"
+            class="profile-icon"
+          />
+          <div class="profile-name">Pankaj</div>
+          <div class="profile-position">Web Developer</div>
+          <a href="https://www.instagram.com/pankaj_singh_____/" class="button"
+            >Connect</a
+          >
         </div>
-        <div class="bg2 wide-bg">
-          <div class="text-container">
-            <h2 style="color: green;">
-              Let's get Started !!
-              <br>
-              (Best wishes on your new adventure)
-            </h2>
-            <br>
-            <p>
-              The Parker Solar Probe is a NASA space probe launched in 2018 with the mission of making observations of the outer corona of the Sun. It will approach to within 9.86 radii(6.9 million km or 4.3 million miles) from the center of the Sun , and by 2025 will travel, at closest approach , as fast as 690,000 km/h or 0.064% the speed of light. It is the fastest object ever built.
-            </p>
-            <p class="p-citation">
-              “Somewhere, something incredible is waiting to be known.” - Carl Sagan
-            </p>
-          </div>
+        <div class="profile-card">
+          <img
+            src="images/team/vishwajeetphoto.jpg"
+            alt="image2"
+            class="profile-icon"
+          />
+          <div class="profile-name">Vishwajeet</div>
+          <div class="profile-position">Graphics Designer</div>
+          <a href="https://www.instagram.com/__vishwajeet_/" class="button"
+            >Connect</a
+          >
         </div>
-        <div class="bg3 wide-bg">
-            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 14rem;">The Parker Solar Probe is the first spacecraft to </p>
-            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 14.5rem;">fly into the low solar corona. It will assess  </p>
-            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 15rem;">the structureand dynamics of the Sun's coronal </p>
-            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 15.5rem;">plasma and magnetic field, the energy flow that </p>
-            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 16rem;">heats the solar corona and impels the solar wind, </p>
-            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 16.5rem;">and the mechanisms that accelerate energetic</p>
-            <p style="color: rgb(252, 249, 249); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 17rem;"> particles. </p>
-            <p style="color: rgb(129, 126, 126); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 23.5rem;">"That's one small step for man, one giant leap for mankind."</p>
-            <p style="color: rgb(129, 126, 126); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 33rem; top: 24rem;">- Neil Armstrong</p>
+        <div class="profile-card">
+          <img
+            src="images/team/Aryan Photo.jpg"
+            alt="image3"
+            class="profile-icon"
+          />
+          <div class="profile-name">Aryan</div>
+          <div class="profile-position">Android Developer</div>
+          <a href="https://www.instagram.com/aryanxsri/" class="button"
+            >Connect</a
+          >
         </div>
-        <div class="bg1 wide-bg">
-            <br>
-            <br>
-            <br>
-          <a href="https://thriving-eclair-cb7264.netlify.app/">
-            <button class="btn" style="top: 11rem !important; position: relative;" id="launch">Let's start</button></a>
+        <div class="profile-card">
+          <img
+            src="images/team/Aditya Photo.jpg"
+            alt="image3"
+            class="profile-icon"
+          />
+          <div class="profile-name">Aditya</div>
+          <div class="profile-position">Content Writer</div>
+          <a href="https://www.instagram.com/bluetick031/" class="button"
+            >Connect</a
+          >
         </div>
-          <div class="bg4">
-              <!-- <a href="#" style="position: relative; left: -34rem;"><button class="btn1">Our Team</button></a> -->
-              <div class="our-team" id="team"><a href="#">Our Team</a></div>
-              <div class="profile-container">
-                <div class="profile-card">
-                  <img src="images/team/pankajphoto.jpg" alt="image1" class="profile-icon" />
-                  <div class="profile-name">Pankaj</div>
-                  <div class="profile-position">Web Developer</div>
-                  <a href="https://www.instagram.com/pankaj_singh_____/" class="button">Connect</a>
-                </div>
-                <div class="profile-card">
-                  <img src="images/team/vishwajeetphoto.jpg" alt="image2" class="profile-icon" />
-                  <div class="profile-name">Vishwajeet</div>
-                  <div class="profile-position">Graphics Designer</div>
-                  <a href="https://www.instagram.com/__vishwajeet_/" class="button">Connect</a>
-                </div>
-                <div class="profile-card">
-                  <img src="images/team/Aryan Photo.jpg" alt="image3" class="profile-icon" />
-                  <div class="profile-name">Aryan</div>
-                  <div class="profile-position">Android Developer</div>
-                  <a href="https://www.instagram.com/aryanxsri/" class="button">Connect</a>
-                </div>
-                <div class="profile-card">
-                  <img src="images/team/Aditya Photo.jpg" alt="image3" class="profile-icon" />
-                  <div class="profile-name">Aditya</div>
-                  <div class="profile-position">Content Writer</div>
-                  <a href="https://www.instagram.com/bluetick031/" class="button">Connect</a>
-                </div>
-                <div class="profile-card">
-                  <img src="images/team/Utkarsh Photo.jpg" alt="image3" class="profile-icon" />
-                  <div class="profile-name">Utkarsh</div>
-                  <div class="profile-position">video editor</div>
-                  <a href="https://www.instagram.com/utkarssssshh/" class="button">Connect</a>
-                </div>
-              </div>
-              <div  class="disclaimer" style="color: whitesmoke; font-family: 'Courier New', Courier, monospace; font-size: 20px;  font-weight: 1000; text-align: right; justify-content: right;"> - ( Switch to a pc for better experience )⠀⠀</div>
-          </div>
-          <footer>
-            <div class="footerQuote">
-              <h3>PANKAJ SINGH</h3>
-              <p class="firstP">If it takes less than 2 minutes, then do it now.</p>
-              <p>-David Allen</p>
-            </div>
-            <div class="socialMedia">
-              <span class="mediaHeader">SOCIAL</span>
-              <ul>
-                <li>
-                  <a href="https://github.com" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                </li>
+        <div class="profile-card">
+          <img
+            src="images/team/Utkarsh Photo.jpg"
+            alt="image3"
+            class="profile-icon"
+          />
+          <div class="profile-name">Utkarsh</div>
+          <div class="profile-position">video editor</div>
+          <a href="https://www.instagram.com/utkarssssshh/" class="button"
+            >Connect</a
+          >
+        </div>
+      </div>
+      <div
+        class="disclaimer"
+        style="
+          color: whitesmoke;
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 20px;
+          font-weight: 1000;
+          text-align: right;
+          justify-content: right;
+        "
+      >
+        - ( Switch to a pc for better experience )⠀⠀
+      </div>
+    </div>
+    <footer>
+      <div class="footerQuote">
+        <h3>PANKAJ SINGH</h3>
+        <p class="firstP">If it takes less than 2 minutes, then do it now.</p>
+        <p>-David Allen</p>
+      </div>
+      <div class="socialMedia">
+        <span class="mediaHeader">SOCIAL</span>
+        <ul>
+          <li>
+            <a href="https://github.com" target="_blank"
+              ><i class="fa fa-github" aria-hidden="true"></i
+            ></a>
+          </li>
 
-                <li>
-                  <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                </li>
+          <li>
+            <a href="https://www.linkedin.com" target="_blank"
+              ><i class="fa fa-linkedin" aria-hidden="true"></i
+            ></a>
+          </li>
 
-                <li>
-                  <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-                </li>
+          <li>
+            <a href="https://youtube.com" target="_blank"
+              ><i class="fa-brands fa-youtube" aria-hidden="true"></i
+            ></a>
+          </li>
 
-                <li>
-                  <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </li>
+          <li>
+            <a href="https://twitter.com" target="_blank"
+              ><i class="fa fa-twitter" aria-hidden="true"></i
+            ></a>
+          </li>
 
-                <li>
-                  <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          </footer>
-      </body>
-        <script>
-          document.getElementById("hamburger-icon").addEventListener('click', () => {
-            document.querySelector(".nav-links").classList.toggle('active')
-            document.querySelector(".mobile-nav").classList.toggle('active')
-          })
-        </script>
+          <li>
+            <a href="https://instagram.com" target="_blank"
+              ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <script>
+    document.getElementById("hamburger-icon").addEventListener("click", () => {
+      document.querySelector(".nav-links").classList.toggle("active");
+      document.querySelector(".mobile-nav").classList.toggle("active");
+    });
+  </script>
 </html>
