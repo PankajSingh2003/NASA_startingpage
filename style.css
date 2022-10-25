@@ -288,19 +288,3 @@ body{
     transition: 400ms ease-in-out;
 
    }
-
-  
-   .para{
-        display: none;
-        color: whitesmoke;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 20px;
-        font-weight: 1000;
-        text-align: right;
-        }
-@media(max-width:600px){
-    .para{
-        display: block;
-    }
-}
-
