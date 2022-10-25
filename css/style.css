@@ -502,8 +502,8 @@ footer {
     font-weight: 1000;
     font-size: 2rem;
     line-height: 3rem;
-    height: 15rem;
-    width: 90%;
+    height: fit-content;
+    width: 100%;
     margin: 15rem auto 0 auto;
 }
 
@@ -572,7 +572,31 @@ footer {
     .profile-card {
         padding: 20px 15px;
     }
+    footer {
+        border-top: 2px solid whitesmoke;
+        display: block;
+        margin-top: 40rem;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 1000;
+        font-size: 2rem;
+        line-height: 3rem;
+        height: fit-content;
+        width: 100%;
+        margin: 15rem auto 0 auto;
+    }
+    .footerQuote {
+        font-family: 'Courier New', Courier, monospace;
+        color: whitesmoke;
+        margin-bottom: 2rem;
+        margin-left: 4.5rem;
+    }
+    .socialMedia {
 
+        
+        margin-left: 4.5rem;
+        display: flex;
+        flex-direction: column;
+    }
     .profile-name {
         font-size: 16px;
     }
