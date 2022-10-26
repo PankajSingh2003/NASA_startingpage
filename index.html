@@ -40,6 +40,9 @@
       overflow-x: hidden;
 
       background-color: black;
+      
+
+      
     }
     .mobile-nav {
       display: none;
@@ -52,7 +55,7 @@
       width: 100%;
       justify-content: flex-end;
       align-items: center;
-    }
+ }
     .desktop-nav ul {
       display: flex;
       justify-content: flex-end;
@@ -62,18 +65,25 @@
       padding: 2rem;
     }
     .desktop-nav ul li a {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+     /* font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+      font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Sacramento', cursive;
+
       text-decoration: none;
-      text-transform: uppercase;
+      text-transform: inherit;
       font-size: 1.5rem;
       color: #fff;
       font-weight: 900;
       transition: all 0.25s ease;
-    }
-    .desktop-nav ul > li:not(:first-child):hover {
+}
+   /* .desktop-nav ul > li:not(:first-child):hover {
       filter: invert();
       background-color: black;
-    }
+    }*/
+
+  
+
     @media (max-width: 815px) {
       .desktop-nav {
         display: none;
@@ -90,6 +100,7 @@
         right: 0;
         background-color: none;
         z-index: 1;
+
       }
       .mobile-nav.active {
         background-color: black;
@@ -210,6 +221,84 @@
     .moon_invert {
       background-image: url("images/space/moon_light.jpg");
     }
+
+    .hoverable{
+  display:inline-block;
+  backface-visibility: hidden;
+  vertical-align: middle;
+  position:relative;
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  transform: translateZ(0);
+  transition-duration: .3s;
+  transition-property:transform;
+}
+
+.hoverable:before{
+  position:absolute;
+  pointer-events: none;
+  z-index:-1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height:10px;
+  width:90%;
+  opacity:0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  /* W3C */
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.hoverable:hover, .hoverable:active, .hoverable:focus{
+  transform: translateY(-5px);
+}
+.hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before{
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+
+
+@keyframes bounce-animation {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation-name: bounce-animation;
+  animation-duration: 2s;
+}
+
+
+
   </style>
   <body>
     <nav class="desktop-nav">
@@ -223,10 +312,10 @@
             Light Mode
         </a>
         </li>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#launch">Launch</a></li>
-        <li><a href="#team">Our Team</a></li>
-        <li><a href="#technology">Technology</a></li>
+        <li><a  class="hoverable" href="#home">Home</a></li>
+        <li><a  class="hoverable" href="#launch">Launch</a></li>
+        <li><a  class="hoverable" href="#team">Our Team</a></li>
+        <li><a  class="hoverable" href="#technology">Technology</a></li>
       </ul>
     </nav>
     <nav class="mobile-nav">
@@ -238,7 +327,7 @@
         </svg>
       </div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#launch">Launch</a></li>
         <li><a href="#team">Our Team</a></li>
         <li><a href="#technology">Technology</a></li>
