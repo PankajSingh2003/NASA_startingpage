@@ -106,7 +106,19 @@ body {
         0 0 50px #42fbf2;
 }
 
+.paragraph-text{
+    font: 22px Arial;
+    display: inline-block;
 
+    /* "to left" / "to right" - affects initial color */
+    background: linear-gradient(to left, black 50%, rgb(255, 54, 54) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+.paragraph-text:hover {
+    background-position: left;
+}
 
 * {
     padding: 0;
