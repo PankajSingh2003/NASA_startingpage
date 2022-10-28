@@ -31,8 +31,26 @@ function light_dark_mode() {
   body.classList.toggle("light-mode");
   const moon = document.querySelector('.bg3')  
   moon.classList.toggle("moon_invert");
-  if (document.getElementById("mode_button").innerHTML.trim() == "Light Mode") document.getElementById("mode_button").innerHTML = "Dark Mode";
-  else document.getElementById("mode_button").innerHTML = "Light Mode";
+  console.log(5);
+  // if (document.getElementById("mode_button").innerHTML.trim() == "Light Mode") document.getElementById("mode_button").innerHTML = "Dark Mode";
+  // else document.getElementById("mode_button").innerHTML = "Light Mode";
 }
 
 
+
+// const toggleSwitch =
+//     document.querySelector('.theme-slider input[type="checkbox"]');
+ 
+// function switchTheme(e) {
+//   console.log(5);  
+//   if (e.target.checked) {
+
+//         document.documentElement.setAttribute('theme', 'dark');
+//     }
+ 
+//     else {
+//         document.documentElement.setAttribute('theme', 'light');
+//     }
+// }
+ 
+// toggleSwitch.addEventListener('change', switchTheme);
