@@ -34,3 +34,5 @@ function light_dark_mode() {
   if (document.getElementById("mode_button").innerHTML.trim() == "Light Mode") document.getElementById("mode_button").innerHTML = "Dark Mode";
   else document.getElementById("mode_button").innerHTML = "Light Mode";
 }
+
+
