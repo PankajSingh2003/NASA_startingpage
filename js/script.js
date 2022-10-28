@@ -31,8 +31,6 @@ function light_dark_mode() {
   body.classList.toggle("light-mode");
   const moon = document.querySelector('.bg3')  
   moon.classList.toggle("moon_invert");
-  if (document.getElementById("mode_button").innerHTML.trim() == "Light Mode") document.getElementById("mode_button").innerHTML = "Dark Mode";
-  else document.getElementById("mode_button").innerHTML = "Light Mode";
+  // if (document.getElementById("mode_button").innerHTML.trim() == "Light Mode") document.getElementById("mode_button").innerHTML = "Dark Mode";
+  // else document.getElementById("mode_button").innerHTML = "Light Mode";
 }
-
-
