@@ -1,8 +1,8 @@
 # NASA_startingpage
 
-Well now Finally this the final page for the NASA Space App Challenge that we are giving Hoping to learn something new out of it 
+Well This page is the front website  of a project i am working on .It showcases some of the small details about the project and the start the project button with all details about your team.
 
-Really !!!
+you can use these webpage to make your own fornt web page for your project with your team portfolio.
 
 # CONTRIBUTION GUIDE
 
