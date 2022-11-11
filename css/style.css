@@ -144,6 +144,7 @@ body {
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 150px;
 }
 
 .profile-card {
@@ -311,6 +312,7 @@ footer {
 .our-team {
     display: flex;
     justify-content: center;
+    margin-bottom: 150px;
 }
 
 .our-team>a {
@@ -650,6 +652,7 @@ footer {
 .our-team {
     display: flex;
     justify-content: center;
+    margin-bottom: 150px;
 }
 
 .our-team>a {
