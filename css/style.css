@@ -135,12 +135,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0 30rem;
+    margin: 0;
+    width: 100vw;
+}
+
+.cards{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 150px;
 }
 
 .profile-card {
-    flex: 1 1 30%;
     max-width: 300rem;
     background: #fff;
     padding: 20px 60px;
@@ -305,8 +312,7 @@ footer {
 .our-team {
     display: flex;
     justify-content: center;
-    padding-top: 150px;
-    margin-bottom: -150px;
+    margin-bottom: 150px;
 }
 
 .our-team>a {
@@ -449,12 +455,11 @@ svg{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0 30rem;
+    width: 100vw;
+    margin: 0;
 }
 
 .profile-card {
-    flex: 1 1 30%;
     max-width: 300rem;
     background: #fff;
     padding: 20px 60px;
@@ -464,7 +469,7 @@ svg{
     border-radius: 4px;
     box-shadow: 0 0 2px 0 #ccc;
     transition: .3s;
-    margin: 0px 15px;
+    margin-top: 15px;
 }
 
 .profile-card:hover {
@@ -647,8 +652,7 @@ footer {
 .our-team {
     display: flex;
     justify-content: center;
-    padding-top: 150px;
-    margin-bottom: -150px;
+    margin-bottom: 150px;
 }
 
 .our-team>a {
