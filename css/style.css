@@ -307,6 +307,7 @@ footer {
     justify-content: center;
     padding-top: 150px;
     margin-bottom: -150px;
+    font-size: 30px;
 }
 
 .our-team>a {
@@ -651,6 +652,15 @@ footer {
     margin-bottom: -150px;
 }
 
+.our-team>a:hover {
+   
+   
+    transform: scale(1.1);
+    box-shadow: 0 0 5px #42fbf2,
+                0 0 10px #42fbf2,
+                0 0 50px #42fbf2;
+  }
+  
 .our-team>a {
     text-decoration: none;
     font-family: 'PT Sans', sans-serif;
@@ -660,6 +670,9 @@ footer {
     font-weight: 500;
     border-bottom: 2px solid #DC143C;
     transition: 400ms ease-in-out;
+    box-shadow: 0px 0px 10px 2px;
+    padding: 5px;
+    border-radius: 10px;
 
 }
 
@@ -803,7 +816,7 @@ span {
     color: #EEEEED;
     background-color: #1F1E1E;
     padding: 0 18px;
-    -webkit-transition: all 1.2s ease;
+    transition: all 1.2s ease;
    
 }
 
