@@ -1,9 +1,10 @@
 html,
 body {
     background-color: black;
-    color: black;
-    background: black;
-    scroll-behavior: smooth;
+}
+
+.ligh-dark{
+    background-color: white;
 }
 
 .loader-line {
@@ -310,12 +311,6 @@ footer {
     border-bottom: 2px solid #DC143C;
     transition: 400ms ease-in-out;
 
-}
-
-body {
-    background-color: black;
-    color: black;
-    background: black;
 }
 
 .loader-line {
