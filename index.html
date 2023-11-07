@@ -1,237 +1,381 @@
-<!Doctype HTML>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-          <meta name="description" content="Starting webpage for nasa space apps">
-          <meta name="keywords" content="HTML, CSS, JavaScript">
-          <meta name="author" content="Pankaj Singh">
-          <meta name="description" content="Starting webpage">
-          <meta name="keywords" content="HTML, CSS, JavaScript,SASS">
-          <meta name="author" content="Pankaj">
+    <meta name="description" content="Starting webpage for nasa space apps" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Pankaj Singh" />
+    <meta name="description" content="Starting webpage" />
+    <meta name="keywords" content="HTML, CSS, JavaScript,SASS" />
+    <meta name="author" content="Pankaj" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://kit.fontawesome.com/38705f3c43.js" crossorigin="anonymous"></script>
-        <title>Parker Solar Probe</title>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/855e3f5928.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/script.js"></script>
-    </head>
-    <style>
-        body, html {
-          height: 100%;
-          margin: 0;
-          overflow-x: hidden;
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/38705f3c43.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Parker Solar Probe</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/855e3f5928.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+  </head>
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      overflow-x: hidden;
 
-          background-color: black;
-        }
-        .mobile-nav {
-            display: none;
-        }
-        #hamburger-icon {
-          display: none;
-        }
-        .desktop-nav {
-          display: flex;
-          width: 100%;
-          justify-content: flex-end;
-          align-items: center;
-        }
-        .desktop-nav ul {
-          display: flex;
-          justify-content: flex-end;
-        }
-        .desktop-nav ul li {
-          list-style-type: none;
-          padding: 2rem;
-        }
-        .desktop-nav ul li a {
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-          text-decoration: none;
-          text-transform: uppercase;
-          font-size: 1.5rem;
-          color: #fff;
-          font-weight: 900;
-          transition: all 0.25s ease;
-        }
-        .desktop-nav ul > li:not(:first-child):hover {
-          filter: invert();
-          background-color: black;
-        }
-        @media(max-width: 815px) {
-          .desktop-nav {
-            display: none;
-          }
-          #hamburger-icon {
-            display: block;
-            text-align: right;
-            padding: 1rem 1rem 0 0;
-          }
-          .mobile-nav {
-            display: block;
-            position: absolute;
-            left: 0;
-            right: 0;
-            background-color: none;
-            z-index: 1;
-          }
-          .mobile-nav.active {
-            background-color: black;
-          }
-          .nav-links {
-            opacity: 0;
-            pointer-events: none;
-            transition: 0.5s ease;
-          }
-          .nav-links.active {
-            opacity: 1;
-            pointer-events: auto;
-          }
-          .mobile-nav ul li {
-            text-decoration: none;
-            margin-top: 1rem;
-          }
-          .mobile-nav ul li a {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: #fff;
-            font-size: 1.5rem;
-            text-decoration: none;
-            text-transform: uppercase;
-          }
-        }
+      background-color: black;
+      
 
-        .wide-bg {
-          height: 100vh;
-          width: 100vw;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          overflow-x: hidden;
-          overflow-y: hidden;
-        }
+      
+    }
+    .mobile-nav {
+      display: none;
+    }
+    #hamburger-icon {
+      display: none;
+    }
+    .desktop-nav {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      align-items: center;
+ }
+    .desktop-nav ul {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .desktop-nav ul li {
+      list-style-type: none;
+      padding: 2rem;
+    }
+    .desktop-nav ul li a {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-        .text-container {
-          color: white;
-          width: 40%;
-          max-width: 50vw;
-          float: right;
-          font-family: 'Courier New', Courier, monospace;
-          font-size: 23px;
-          font-weight: 1000;
-          margin: 2%;
-        }
+      text-decoration: none;
+      text-transform: inherit;
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 900;
+      transition: all 0.25s ease;
+}
 
-        .p-citation {
-          color: rgb(129, 126, 126);
-          margin-top: 36px;
-        }
+   /* .desktop-nav ul > li:not(:first-child):hover {
+      filter: invert();
+      background-color: black;
+    }*/
 
-        .bg {
-          background-image: url("/images/space/wp2069024-the-earth-wallpapers.jpg");
-        }
-        .bg1{
-          background-image: url("/images/space/1_sun.jpg");
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
-        }
+  
 
-        .bg2{
-          background-image: url("/images/space/116939.jpg");
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-        }
+    @media (max-width: 815px) {
+      .desktop-nav {
+        display: none;
+      }
+      #hamburger-icon {
+        display: block;
+        text-align: right;
+        padding: 1rem 1rem 0 0;
+      }
+      .mobile-nav {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: none;
+        z-index: 1;
 
-        .bg3{
-          background-image: url("/images/space/51726-moon-stars-planets-4k-5k-hd.jpg");
-        }
+      }
+      .mobile-nav.active {
+        background-color: black;
+      }
+      .nav-links {
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s ease;
+      }
+      .nav-links.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .mobile-nav ul li {
+        text-decoration: none;
+        margin-top: 1rem;
+      }
+      .mobile-nav ul li a {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #fff;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
 
-        .bg4{
-          background-image: url("/images/space/wp4862608-full-black-desktop-wallpapers.jpg");
-        }
+    .wide-bg {
+      height: 100vh;
+      width: 100vw;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
 
-        .social-icon{
-          margin: 10px 20px;
-          font-size: 50px;
-          color: white;
-        }
+    .text-container {
+      color: white;
+      width: 40%;
+      max-width: 50vw;
+      float: right;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 23px;
+      font-weight: 1000;
+      margin: 2%;
+    }
 
-        .social-icon:hover{
-          color:blue;
-        }
+    .p-citation {
+      color: rgb(129, 126, 126);
+      margin-top: 36px;
+    }
 
-        .copyright{
-          font-size: 30px;
-        }
+    .bg {
+      background-image: url("images/space/wp2069024-the-earth-wallpapers.jpg");
+      position: relative;
+    }
+    .bg-title {
+      position: absolute;
+      right: 10vw;
+      bottom: 30vh;
+    }
+    .bg1 {
+      background-image: url("images/space/1_sun.jpg");
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
 
-        .copyright:hover{
-          color: white;
-        }
+    .bg2 {
+      background-image: url("images/space/116939.jpg");
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
 
-        .footer{
-          text-align: center;
-          padding: 7% 15%;
-          background-color: #5c5c5c;
-        }
-        #mode_button{         
-          width: 80px;
-          height: 40px;          
-          background-color: #ddd;
-          border-radius: 10px;
-        }
-        .light-mode {
-          background-color: rgb(48,125,197);          
-        }
-        #mode_button:hover{
-          background-color: #ccc;
-        }
-        .moon_invert{
-          background-image: url("/images/space/moon_light.jpg");
-        }
+    .bg3 {
+      background-image: url("images/space/51726-moon-stars-planets-4k-5k-hd.jpg");
+    }
 
-        </style>
-      <body>
-        <nav class="desktop-nav">
-          <ul> 
-            <li>             
-              <button id="mode_button" class="mode_button" onclick=light_dark_mode()>  
-                Light  Mode           
-              </button>             
-            </li>       
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Launch</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Technology</a></li>
-          </ul>
-        </nav>
-        <nav class="mobile-nav">
-          <div id="hamburger-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="11">
-              <g fill="#fff" fill-rule="evenodd">
-                <path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z"/>
-              </g>
-            </svg>
-          </div>
-          <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Launch</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Technology</a></li>
-          </ul>
-        </nav>
-        <div class="bg wide-bg">
+    .bg4 {
+      background-image: url("images/space/wp4862608-full-black-desktop-wallpapers.jpg");
+    }
 
-            <p style="color: rgb(252, 249, 249); font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:  xxx-large; font-weight: 1000; position: relative; left: 65rem; top: 31rem">Parker</p>
-            <p style="color: rgb(245, 244, 244); font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:  xxx-large; font-weight: 1000; position: relative; left: 65rem; top: 32rem"> Solar Probe</p>
-            <div class="loader-line"></div>
+    .social-icon {
+      margin: 10px 20px;
+      font-size: 50px;
+      color: white;
+    }
+
+    .social-icon:hover {
+      color: blue;
+    }
+
+    .copyright {
+      font-size: 30px;
+    }
+
+    .copyright:hover {
+      color: white;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 7% 15%;
+      background-color: #5c5c5c;
+    }
+    #mode_button {
+      padding: 5px 10px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+    .light-mode {
+      background-color: rgb(48, 125, 197);
+    }
+    #mode_button:hover {
+      background-color: #ccc;
+    }
+    .moon_invert {
+      background-image: url("images/space/moon_light.jpg");
+    }
+
+    .hoverable{
+  display:inline-block;
+  backface-visibility: hidden;
+  vertical-align: middle;
+  position:relative;
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  transform: translateZ(0);
+  transition-duration: .3s;
+  transition-property:transform;
+}
+
+.hoverable:before{
+  position:absolute;
+  pointer-events: none;
+  z-index:-1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height:10px;
+  width:90%;
+  opacity:0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  /* W3C */
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.hoverable:hover, .hoverable:active, .hoverable:focus{
+  transform: translateY(-5px);
+}
+.hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before{
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+
+
+@keyframes bounce-animation {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation-name: bounce-animation;
+  animation-duration: 2s;
+}
+
+
+
+  </style>
+  <body>
+    <nav class="desktop-nav">
+      <ul>
+        <li id="toggle2">
+          <a>
+          <svg stroke="currentColor" fill="none"
+        stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"
+        xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </a></li>
+          <!-- <a
+            id="mode_button"
+            class="mode_button"
+            onclick="light_dark_mode()"
+          >
+            Light Mode
+        </a> -->
+        <li id="toggle">
+        <div 
+        class="mode_button theme-switch-container">
+          <label class="theme-slider" for="checkbox">
+              <input type="checkbox" id="checkbox" 
+              
+        onclick="light_dark_mode()"
+        />
+              <div class="round slider"></div>
+          </label>
         </div>
+      </li>
+    <li id="toggle1">
+    <a>
+        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" 
+        stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="5">
+        </circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" 
+        y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" 
+        x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </a>
+        </li>
+        <li><a  class="hoverable" href="#home">Home</a></li>
+        <li><a  class="hoverable" href="#launch">Launch</a></li>
+        <li><a  class="hoverable" href="#team">Our Team</a></li>
+      </ul>
+    </nav>
+    <nav class="mobile-nav">
+      <div id="hamburger-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="11">
+          <g fill="#fff" fill-rule="evenodd">
+            <path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z" />
+          </g>
+        </svg>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#launch">Launch</a></li>
+        <li><a href="#team">Our Team</a></li>
+      </ul>
+    </nav>
+    <div class="bg wide-bg" id="home">
+      <div class="bg-title paragraph-text">
+        <p
+        style="
+          color: rgb(252, 249, 249);
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: xxx-large;
+          font-weight: 1000;">
+        Parker
+      </p>
+      <p
+        style="
+          color: rgb(245, 244, 244);
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: xxx-large;
+          font-weight: 1000;">
+        Solar Probe
+      </p>
+      </div>
+      <div class="loader-line"></div>
+    </div>
         <div class="bg2 wide-bg">
           <div class="text-container">
             <h2 style="color: green;">
@@ -259,16 +403,16 @@
             <p style="color: rgb(129, 126, 126); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 1rem; top: 23.5rem;">"That's one small step for man, one giant leap for mankind."</p>
             <p style="color: rgb(129, 126, 126); font-family: 'Courier New', Courier, monospace; font-size: 23px; font-weight: 1000; position: relative; left: 33rem; top: 24rem;">- Neil Armstrong</p>
         </div>
-        <div class="bg1 wide-bg">
+        <div class="bg1 wide-bg" id ="launch">
             <br>
             <br>
             <br>
           <a href="https://thriving-eclair-cb7264.netlify.app/">
-            <button class="btn" style="top: 11rem !important; position: relative;">Let's start</button></a>
+            <button class="btn" style="top: 11rem !important; position: relative;" >Let's start</button></a>
         </div>
           <div class="bg4">
               <!-- <a href="#" style="position: relative; left: -34rem;"><button class="btn1">Our Team</button></a> -->
-              <div class="our-team"><a href="#">Our Team</a></div>
+              <div class="our-team" id = "team"><a href="#">Our Team</a></div>
               <div class="profile-container">
                 <div class="profile-card">
                   <img src="/images/team/pankajphoto.jpg" alt="image1" class="profile-icon" />
@@ -293,36 +437,30 @@
           </div>
           <footer>
             <div class="footerQuote">
-              <h3>PANKAJ SINGH</h3>
+              <h3>Proxima Centauri</h3>
               <p class="firstP">If it takes less than 2 minutes, then do it now.</p>
               <p>-David Allen</p>
             </div>
-            <div class="socialMedia">
-              <span class="mediaHeader">SOCIAL</span>
-              <ul>
-                <li>
-                  <a href="https://github.com" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                </li>
-
-                <li>
-                  <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                </li>
-
-                <li>
-                  <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-                </li>
-
-                <li>
-                  <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </li>
-
-                <li>
-                  <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                </li>
-              </ul>
-            </div>
+            <div class="btn_wrap">
+              <span>Social</span>
+              <div class="container">
+                  <a href="https://github.com" target="_blank"
+                    ><i class="fab fa-github"></i></a>
+                  <a href="https://www.linkedin.com" target="_blank"
+                    ><i class="fa fa-linkedin" aria-hidden="true"></i
+                  ></a>
+                  <a href="https://youtube.com" target="_blank"
+                    ><i class="fa-brands fa-youtube" aria-hidden="true"></i
+                  ></a>
+                  <a href="https://twitter.com" target="_blank"
+                    ><i class="fa fa-twitter" aria-hidden="true"></i
+                  ></a>
+                  <a href="https://instagram.com" target="_blank"
+                    ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+                  ></a>
+              </div>
           </div>
-          </footer>
+            </footer>
       </body>
         <script>
           document.getElementById("hamburger-icon").addEventListener('click', () => {
